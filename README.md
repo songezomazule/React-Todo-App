@@ -1,3 +1,3 @@
 A CRUD Todo list app, created with HTML, CSS, Javascript and React
 To run the app on your local host. In your terminal, run npm install to install node modules and npm run dev to display on your browser.
-Live app. recatjs-todo-list.netlify.app
+Link to the live app: recatjs-todo-list.netlify.app
