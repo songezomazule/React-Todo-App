@@ -6,6 +6,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [inputText, setInputText] = useState("");
 
+
   function addTask(newTask) {
     const newTaskList = [...tasks, newTask];
     setTasks(newTaskList);

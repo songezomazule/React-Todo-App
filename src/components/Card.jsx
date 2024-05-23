@@ -1,19 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 
 export default function Card(props) {
   const { children, deleteTodo, index, editTodo } = props;
+  const [isComplete, setIsComplete] = useState(false);
+
+  function completeTask() {
+    setIsComplete(prevValue => {
+      return !prevValue;
+    })
+  }
+
   return (
-    <li className="listContainer">
+    <li className="listContainer" style={{ textDecoration: isComplete ? "line-through" : "none"}}>
       {children}
       <div className="icons">
-        <button className="btn-2"
+        <button onClick={completeTask}>
+          <i class="fa-solid fa-check"></i>
+        </button>
+        <button
           onClick={() => {
             editTodo(index);
           }}
         >
           <i className="fa-solid fa-pen-to-square"></i>
         </button>
-        <button className="btn-2"
+        <button
           onClick={() => {
             deleteTodo(index);
           }}

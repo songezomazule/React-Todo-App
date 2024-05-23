@@ -15,8 +15,9 @@ export default function InputText(props) {
         onChange={handleChange}
         type="text"
         placeholder="Add Task"
+        maxLength="40"
       />
-      <button className="btn-1"
+      <button
         onClick={() => {
           addTask(inputText);
           setInputText("");
